@@ -1,0 +1,17 @@
+<div>
+    <form action="/add" method="POST">
+        <input type="text" placeholder="Enetr Task" name="Todo"> 
+        <input type="submit" value="Add Todo"> 
+        
+    </form>
+    <div class="list">
+      <h1>List of tasks</h1>
+        <ul>
+
+            {{#each todo}}
+                <li>{{this.task}} <button> <a href="/{{this.id}}">done</a> </button> </li>
+            {{/each}}
+
+        </ul>
+    </div>
+</div>
